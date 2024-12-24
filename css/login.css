@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to right,
+    #1f2937,
+    #4b5563
+  ); /* gradient from gray-900 to gray-700 */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  padding: 32px;
+}
+
+.login-container .text-center {
+  text-align: center;
+}
+
+.login-container h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748; /* gray-800 */
+}
+
+.login-container p {
+  color: #4a5568; /* gray-600 */
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0; /* border-gray-300 */
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #3b82f6; /* blue-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3); /* focus:ring-blue-500 */
+}
+
+input::placeholder {
+  color: #a0aec0; /* gray-400 */
+}
+
+.error-message {
+  color: #f56565; /* red-500 */
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+  border-radius: 8px;
+  margin-top: 16px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8; /* blue-700 */
+}
+
+.forgot-password {
+  color: #3b82f6; /* blue-600 */
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.forgot-password a {
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 24px;
+    max-width: 100%;
+  }
+
+  .login-container h1 {
+    font-size: 1.25rem;
+  }
+
+  .login-container img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .login-container {
+    padding: 16px;
+  }
+
+  .login-container h1 {
+    font-size: 1.125rem;
+  }
+
+  .login-container img {
+    width: 50px;
+    height: 50px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
