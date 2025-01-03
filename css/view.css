@@ -93,3 +93,50 @@ td {
     padding: 8px;
   }
 }
+/* Basic Styling */
+.search-form {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-form input[type="text"] {
+  padding: 5px;
+  font-size: 14px;
+  width: 250px; /* Adjust this width */
+  max-width: 100%; /* Allow it to scale down on smaller screens */
+}
+
+.search-form button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column; /* Stack the input and button vertically */
+    gap: 10px;
+  }
+
+  .search-form input[type="text"] {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .search-form button {
+    width: 100%; /* Button takes full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .search-form input[type="text"] {
+    font-size: 12px; /* Reduce font size on very small screens */
+  }
+
+  .search-form button {
+    font-size: 12px;
+  }
+}

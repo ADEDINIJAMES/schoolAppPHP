@@ -24,6 +24,7 @@
                 <ul>
                     <li><a href="index.php?action=registerStudent">Register a New Student</a></li>
                     <li><a href="index.php?action=viewStudents">View All Students</a></li>
+                    <li> <a href ="index.php?action=addquestion"> Add question </a></li>
                 </ul>
             </div>
         <?php endif; ?>

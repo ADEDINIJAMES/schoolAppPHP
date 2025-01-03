@@ -5,12 +5,15 @@ require_once '../config/Database.php';
 class UserController {
     private $model;
 
+
     public function __construct() {
         $this->model = new UserModel();
     }
 
     public function isAdmin() {
     if (!isset($_SESSION['user']) || empty($_SESSION['user']['is_Admin']) || $_SESSION['user']['is_Admin'] != 1) {
+          echo '<pre>'; print_r($_SESSION); echo '</pre>'; // Check the session contents
+        die('Access denied.');
         header('Location: ?action=login');
         exit();
     }
@@ -21,7 +24,7 @@ class UserController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $user = $this->model->getUserByEmail($email); // Fetch user details
+            $user = $this->model->getUserByEmail($email);
             
             if ($user && password_verify($password, $user['password'])) {
                 // Store user data in session
@@ -70,4 +73,5 @@ class UserController {
         header('Location: ?action=login');
         exit();
     }
+    
 }
